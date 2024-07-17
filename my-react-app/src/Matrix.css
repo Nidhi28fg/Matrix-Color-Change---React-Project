@@ -1,15 +1,50 @@
 /* src/Matrix.css */
-.matrix {
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ef886ecb, #feb47b); /* Adding a colorful gradient background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .matrix {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    gap: 5px;
+    gap: 10px;
     margin: 20px auto;
+    perspective: 1000px; /* Adding perspective for 3D effect */
   }
   
   .box {
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
+    border-radius: 15px; /* Rounded corners */
+    border: none; /* Removing default border */
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff; /* White text color for better visibility */
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and box-shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  }
+  
+  .box:hover {
+    transform: rotateY(20deg) rotateX(20deg) scale(1.1); /* 3D rotation and scaling on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifying shadow on hover */
+  }
+  
+  .box.green {
+    background-color: green;
+  }
+  
+  .box.orange {
+    background-color: orange;
   }
   
